@@ -108,7 +108,7 @@ def login(s: requests.Session, username, password, cookie_file: Path):
 
 def get_daily(s: requests.Session):
     # daily = s.get("https://app.ucas.ac.cn/ncov/api/default/daily?xgh=0&app_id=ucas")
-    daily = s.get("https://app.ucas.ac.cn/site/dailyReport/reportAll?appid=9")
+    daily = s.get("https://app.ucas.ac.cn/site/dailyReport/reportAll?appid=ucas")
     # info = s.get("https://app.ucas.ac.cn/ncov/api/default/index?xgh=0&app_id=ucas")
     if '操作成功' not in daily.text:
         # 会话无效，跳转到了登录页面
