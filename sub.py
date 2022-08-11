@@ -176,7 +176,7 @@ def submit(s: requests.Session, old: dict):
         print("提交数据存在问题，请手动打卡，问题原因： {}".format(check_data_msg))
         return
 
-    r = s.post("https://app.ucas.ac.cn/ncov/api/default/save", data=new_daily)
+    r = s.post("https://app.ucas.ac.cn/ucasncov/api/default/save", data=new_daily)
     if debug:
         from urllib.parse import parse_qs, unquote
         print("昨日信息:", json.dumps(old, ensure_ascii=False, indent=2))
